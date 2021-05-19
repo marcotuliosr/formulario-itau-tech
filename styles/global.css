@@ -1,0 +1,80 @@
+
+/* // o root serve para patronizar as cores */
+/* define : root e chaves e coloca --nome: cor em hexadecimal */
+:root {
+  --background: #FFF;
+  --primary: #ff6737;
+  --secondary: #004990;
+  --yellow: #FFD700;
+  --dark-blue: #2D2F8C;
+  --red: #e52e40;
+  --green: #33cc95;
+  --text-light: #fff;
+  --text-title: #363f5f;
+  --text-body: #969cb3;
+  --cancel: #969b89;
+  --footer: #958279;
+  --shape: #ffffff;
+  --color-line-in-white: #E6E6F0;
+  --color-input-background: #F8F8FC;
+  --color-text-base: #6A6180;
+  --color-primary-lighter: #9871F5;
+}
+  /* pega todas tag e coloca margin padding e box-szing para resetar   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ 
+
+body {
+  /* deixa fonte com mais nitidez */
+  -webkit-font-smoothing: antialiased;
+  /* exemplo de background usando var */
+  background: var(--background);
+}
+
+html {
+  /* responsividade usando rem */
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}  
+ /* definite patrao da font fanmily e font weight em algumas tags de exibicao */
+border-style,
+input,
+textarea,
+button {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 600;
+}
+
+/* definir ponteiro do mousek */
+button {
+  cursor: pointer;
+}
+
+/* /desabilitar o botao quando eh disabled */
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+ 
