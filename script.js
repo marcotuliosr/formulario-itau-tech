@@ -1,14 +1,14 @@
 function is_cpf(c) {
 
-  if ((c = c.replace(/[^\d]/g, "")).length != 11) // Pegar 14 caracteres incluso pontos , nada alem disso                    //O método replace() retorna uma nova string com algumas ou todas as correspondências de um padrão substituídas por um determinado caractere (ou caracteres). O padrão pode ser uma string ou uma RegExp, e a substituição pode ser uma string ou uma função a ser chamada para cada correspondência. Se o padrão for uma string, apenas a primeira ocorrência será substituída.
-    
-  // valida o cpf
+  if ((c = c.replace(/[^\d]/g, "")).length != 11) // Pegar caracteres incluso pontos , nada alem disso                    //O método replace() retorna uma nova string com algumas ou todas as correspondências de um padrão substituídas por um determinado caractere (ou caracteres). O padrão pode ser uma string ou uma RegExp, e a substituição pode ser uma string ou uma função a ser chamada para cada correspondência. Se o padrão for uma string, apenas a primeira ocorrência será substituída.
+
+    // valida o cpf
     return false
 
   if (c == "00000000000")// Validar CPF Falso
     return false;
 
-  if (c == "11111111111")// Validar CPF Falso
+  if (c == "11111111111")// Validar CPF Falso           //Assim, confirmamos os dois dígitos verificadores do nosso CPF 145.382.206-20 e sabemos que esse CPF é válido. Outra regra muito importante é que CPFs com números iguais como: 111.111.111-11, 222.222.222-22, entre outros, são CPFs válidos pelo algoritmo mas não existem no registro oficial. Assim esse tipo de CPF não pode ser usado.
     return false;
 
   if (c == "22222222222")// Validar CPF Falso
@@ -46,7 +46,7 @@ function is_cpf(c) {
   if ((r == 10) || (r == 11))
     r = 0;
 
-  if (r != parseInt(c[9]))
+  if (r != parseInt(c[9]))  // ! = O operador lógico NÃO () operador (complemento lógico, negação) leva a verdade à falsidade e vice-versa.
     return false;
 
   s = 0;
@@ -57,10 +57,10 @@ function is_cpf(c) {
   r = (s * 10) % 11; // multiplica resulado soma por 10 e dividide por 11
 
 
-  if ((r == 10) || (r == 11))
+  if ((r == 10) || (r == 11)) // == O operador de igualdade () verifica se seus dois operandos são iguais, devolvendo um resultado booleano
     r = 0;
 
-  if (r != parseInt(c[10]))
+  if (r != parseInt(c[10])) // !=  O operador da desigualdade (emis) verifica se seus dois operandos não são iguais, devolvendo um resultado booleano
     return false;
 
   return true; // Caso todo algortimo rode , retornar verdadeiro
@@ -93,27 +93,6 @@ cpfCheck = function (el) {
     document.getElementById('cpf').value = '';
   }
   else if (!el.value) alert(`Campo obrigatorio preencha esse campo`) // verifica se nao tem valor e exibe uma mensamgem
-}
-
-//-------------------------------------------------
-
-
-function fMasc(objeto, mascara) {
-  obj = objeto
-  masc = mascara
-  setTimeout("fMascEx()", 1)
-}
-
-function fMascEx() {
-  obj.value = masc(obj.value)
-}
-
-function mCPF(cpf) {
-  cpf = cpf.replace(/\D/g, "") //Remove tudo o que não é dígito
-  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
-  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
-  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
-  return cpf
 }
 
 
