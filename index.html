@@ -16,7 +16,7 @@
   <!-- // define o header -->
   <header>
     <!-- <span class="logo">Itaú</span>  -->
-    <img src="https://logospng.org/download/itau/logo-itau-4096.png" alt="Logo">
+    <img src="https://logospng.org/download/itau/logo-itau-4096.png" alt="Imagem logo do itaú em cores azul e laranja escrito em amarelo">
   </header>
   <!-- define o man -->
   <main>
@@ -33,7 +33,7 @@
                 <label htmlFor="nome">Nome: </label>
                 <span class="required-danger">(*)</span>
               </div>
-              <input type="nome" id="nome" placeholder="Digite seu nome ..." autocomplete="off" name="nome" />
+              <input type="nome" id="nome" placeholder="Digite seu nome (Somente Letras)"  name="nome" pattern="[A-Za-z çáâãéêíóôúü]+" />
 
             </div>
           </div>
@@ -53,7 +53,7 @@
               <div>
                 <label htmlFor="rg">RG: </label>
               </div>
-              <input type="text" id="rg" placeholder="Digite o seu RG..." name="rg" />
+              <input type="text" id="rg" placeholder="Digite o seu RG..." name="rg"  pattern="[A-Za-z0-9]+" />
 
             </div>
 
@@ -93,7 +93,7 @@
                 <label htmlFor="numero">Numero: </label>
                 <span class="required-danger">(*)</span>
               </div>
-              <input type="number" id="numero" placeholder="Digite o seu Numero..." name="numero" />
+              <input type="number" id="numero" placeholder="Digite o seu Numero..." name="numero" pattern="[0-9]+" />
 
             </div>
           </div>
@@ -101,19 +101,19 @@
           <div class="linha">
             <div class="group-input">
               <label htmlFor="bairro">Bairro: </label>
-              <input type="text" id="bairro" placeholder="Digite o seu Bairro..." name="bairro" />
+              <input type="text" id="bairro" placeholder="Digite o seu Bairro..." name="bairro" pattern="[A-Za-z çáâãéêíóôúü]+" />
 
             </div>
 
             <div class="group-input">
               <label htmlFor="cidade">Cidade: </label>
-              <input type="text" id="cidade" placeholder="Digite o seu Cidade..." name="cidade" />
+              <input type="text" id="cidade" placeholder="Digite a sua Cidade..." name="cidade" pattern="[A-Za-z çáâãéêíóôúü]+" />
 
             </div>
 
             <div class="group-input">
               <label htmlFor="estado">Estado: </label>
-              <input type="text" id="estado" placeholder="Digite o seu Estado..." name="uf" />
+              <input type="text" id="estado" placeholder="Digite o seu Estado..." name="uf" pattern="[A-Za-z çáâãéêíóôúü]+" />
 
             </div>
           </div>
@@ -121,7 +121,7 @@
           <div class="linha">
             <div class="group-input">
               <label htmlFor="telefone_fixo">Telefone Fixo: </label>
-              <input type="text" id="telefone_fixo" placeholder="Digite o seu Telefone Fixo..." name="telefone_fixo" />
+              <input type="text" id="telefone_fixo" placeholder="Digite o seu Telefone Fixo(Somente Números)" name="telefone_fixo" pattern="[0-9]+" />
 
             </div>
 
